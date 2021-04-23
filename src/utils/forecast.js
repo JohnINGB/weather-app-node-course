@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        `Local date/time: ${body.location.localtime}. Conditions: ${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} degrees out, but it feels like it's ${body.current.feelslike} degrees out. The humidity is ${body.current.humidity} percent.`
+        `<img src="${body.current.weather_icons[0]}"><p><b>Local date/time:</b> ${body.location.localtime}. <b>Conditions:</b> ${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} degrees out, but it feels like it's ${body.current.feelslike} degrees out. The humidity is ${body.current.humidity} percent.</p>`
       );
     }
   });
